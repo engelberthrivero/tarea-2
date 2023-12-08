@@ -1,0 +1,218 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Estilos del contenedor principal */
+.container {
+  width: 800px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilos de la cabecera */
+.header {
+  height: 100px;
+  background-color: #66aaff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  color: white;
+  font-size: 32px;
+}
+
+/* Estilos del cuerpo */
+.body {
+  padding: 20px;
+}
+
+/* Estilos del formulario */
+.form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-input:focus {
+  border-color: #66aaff;
+}
+
+.form-button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #66aaff;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-button:hover {
+  background-color: #3399ff;
+}
+
+.form-button:active {
+  background-color: #0088ff;
+}
+
+.form-error {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffcccc;
+  color: #ff0000;
+  font-size: 14px;
+  display: none;
+}
+
+.form-success {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ccffcc;
+  color: #00ff00;
+  font-size: 14px;
+  display: none;
+}
+
+/* Estilos de la lista de comentarios */
+.comment-list {
+  margin-top: 20px;
+}
+
+.comment-item {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.comment-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.comment-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-content {
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.comment-body {
+  margin-top: 10px;
+}
+
+/* Estilos de las animaciones */
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Estilos de los estados de los comentarios */
+.comment-item.inactive {
+  animation: slide-in 0.5s forwards;
+}
+
+.comment-item.outactive {
+  animation: slide-out 0.5s forwards;
+}
+
+.form-error.inactive, .form-success.inactive {
+  animation: fade-in 0.5s forwards;
+}
+
+.form-error.outactive, .form-success.outactive {
+  animation: fade-out 0.5s forwards;
+}
+
+
